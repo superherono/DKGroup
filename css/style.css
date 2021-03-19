@@ -369,9 +369,9 @@ body {
   font-size: 35px;
   border-radius: 22px;
   background-color: #ffe500;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 
 .btn:hover {
@@ -431,6 +431,7 @@ body {
 .logo__name {
   font-family: "Vampiro One";
   font-size: 40px;
+  color: #000;
 }
 
 .menu-header {
@@ -962,8 +963,139 @@ body {
   margin-bottom: 0;
 }
 
+.contacts__title {
+  margin-bottom: 35px;
+}
+
+.contacts__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.contacts__column {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+
+.contacts__telegramm {
+  margin-bottom: 35px;
+}
+
+.contacts__icon {
+  margin-right: 30px;
+}
+
+.contacts__text {
+  font-size: 30px;
+  line-height: 120%;
+  color: #000;
+}
+
+.contacts__btn a {
+  -webkit-transition: all .5s ease 0s;
+  -o-transition: all .5s ease 0s;
+  transition: all .5s ease 0s;
+  color: #000;
+}
+
+.contacts__btn:hover a {
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgba(255, 229, 0, 0.5);
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer__row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__row:first-child {
+  margin-bottom: 55px;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__list li {
+  margin-right: 15px;
+}
+
+.footer__list:last-child {
+  margin-right: 0;
+}
+
+.footer__text {
+  font-size: 20px;
+  line-height: 120%;
+  color: #545355;
+}
+
+.footer__text span {
+  font-family: "Vampiro One";
+  font-size: 25px;
+  line-height: 124%;
+  color: #000;
+}
+
+.footer__text_copyright {
+  position: relative;
+  padding-left: 20px;
+}
+
+._no-webp .footer__text_copyright::before{
+  background: url("../img/icons/footer/copyright.png") 0 0 no-repeat; }
+
+.footer__text_copyright::before {
+  content: '';
+  position: absolute;
+  top: -5%;
+  left: -7px;
+  width: 20px;
+  height: 20px;
+}
+
 ._no-webp .wrapper{
-  background: url("../img/icons/flower-m.png") 92% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat; }
+  background: url("../img/icons/flower-m.png") 92% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat, url("../img/icons/square3.png") 104% 1150px no-repeat, url("../img/icons/flower-s.png") 1.1% 1379px no-repeat, url("../img/icons/square-second.png") -10.9% 2077px no-repeat, url("../img/icons/flower-s.png") 101% 2032px no-repeat, url("../img/icons/flower-s.png") 1.1% 2732px no-repeat, url("../img/icons/square-second.png") 109% 3177px no-repeat, url("../img/icons/flower-s.png") -6% 3732px no-repeat, url("../img/icons/flower-s.png") 86% 4185px no-repeat, url("../img/icons/square3.png") 109% 4380px no-repeat; }
 
 .wrapper {
   max-width: 1600px;
@@ -1005,6 +1137,18 @@ body {
 
 .page__gallery {
   margin-bottom: 80px;
+}
+
+.page__prices {
+  padding: 0px 0px 80px 0px;
+}
+
+.page__contacts {
+  margin-bottom: 80px;
+}
+
+.page__footer {
+  padding: 20px 0;
 }
 
 @media (min-width: 991.98px) {
@@ -1055,12 +1199,14 @@ body {
 
 @media (max-width: 1160px) {
   ._no-webp .wrapper{
-    background: url("../img/icons/flower-m.png") 106% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat; }
+    background: url("../img/icons/flower-m.png") 106% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px/227px no-repeat; }
 }
 
-._webp .wrapper{ background: url(../img/icons/flower-m.webp) 92% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
+._webp .footer__text_copyright::before{ background: url(../img/icons/footer/copyright.webp) 0 0 no-repeat; }
+
+._webp .wrapper{ background: url(../img/icons/flower-m.webp) 92% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat, url(../img/icons/square3.webp) 104% 1150px no-repeat, url(../img/icons/flower-s.webp) 1.1% 1379px no-repeat, url(../img/icons/square-second.webp) -10.9% 2077px no-repeat, url(../img/icons/flower-s.webp) 101% 2032px no-repeat, url(../img/icons/flower-s.webp) 1.1% 2732px no-repeat, url(../img/icons/square-second.webp) 109% 3177px no-repeat, url(../img/icons/flower-s.webp) -6% 3732px no-repeat, url(../img/icons/flower-s.webp) 86% 4185px no-repeat, url(../img/icons/square3.webp) 109% 4380px no-repeat; }
 
 @media (max-width: 1160px){
 
-  ._webp .wrapper{ background: url(../img/icons/flower-m.webp) 106% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
+  ._webp .wrapper{ background: url(../img/icons/flower-m.webp) 106% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px/227px no-repeat; }
 }
