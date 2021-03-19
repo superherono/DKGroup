@@ -1,3 +1,9 @@
+@charset "UTF-8";
+
+.rub:after {
+  content: "₽";
+}
+
 @font-face {
   font-family: "Museo";
   font-display: swap;
@@ -380,7 +386,12 @@ body {
 }
 
 .header {
-  background-color: #fff280;
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffe500;
 }
 
 .header__container {
@@ -424,7 +435,6 @@ body {
 
 .menu-header {
   font-size: 24px;
-  font-weight: 700;
 }
 
 .menu-header__link {
@@ -560,8 +570,8 @@ body {
 
 .about-us__column {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 51.47516%;
-          flex: 0 1 51.47516%;
+      -ms-flex: 0 1 46.58385%;
+          flex: 0 1 46.58385%;
   padding: 40px 0px 0px 0px;
 }
 
@@ -673,8 +683,8 @@ body {
           flex: 0 0 31.0559%;
   margin-right: 30px;
   padding: 0 0px 28% 0;
-  -webkit-box-shadow: 10px -11px 20px 0px rgba(69, 29, 185, 0.6);
-          box-shadow: 10px -11px 20px 0px rgba(69, 29, 185, 0.6);
+  -webkit-box-shadow: 11px -5px 20px 0px rgba(69, 29, 185, 0.6);
+          box-shadow: 11px -5px 20px 0px rgba(69, 29, 185, 0.6);
 }
 
 .gallery__slide:last-child {
@@ -691,6 +701,7 @@ body {
 }
 
 .gallery__dotts span {
+  position: relative;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -698,14 +709,13 @@ body {
   background-color: #fbb034;
   background-image: -o-linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
   background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
-  position: relative;
 }
 
 .gallery__dotts .swiper-pagination-bullet {
+  position: relative;
   cursor: pointer;
   margin: 0 23px;
   overflow: hidden;
-  position: relative;
 }
 
 .gallery__dotts .swiper-pagination-bullet-active {
@@ -717,7 +727,11 @@ body {
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
-.gallery__hover {
+.gallery__main-photo {
+  display: none;
+}
+
+.hover-item-gallery {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -731,9 +745,6 @@ body {
   -webkit-transform: translate(0px, -120%);
       -ms-transform: translate(0px, -120%);
           transform: translate(0px, -120%);
-}
-
-.hover-item-gallery {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.84);
   color: #fff;
@@ -760,6 +771,7 @@ body {
 
 .hover-item-gallery__title {
   margin-bottom: 25px;
+  font-family: "Museo-500";
   font-size: 30px;
   line-height: 120%;
   text-align: center;
@@ -819,7 +831,138 @@ body {
   transition: all 0.3s ease 0s;
 }
 
-._no-webp .wrapper {
+.prices__title {
+  margin-bottom: 10px;
+}
+
+.prices__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -30px;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.prices .prices__hover {
+  top: 42%;
+  height: auto;
+  -webkit-transform: translate(0px, 200%);
+      -ms-transform: translate(0px, 200%);
+          transform: translate(0px, 200%);
+  border-radius: 15px;
+  background-color: #451db9;
+}
+
+.prices .prices__hover .hover-item-gallery__body {
+  border: none;
+}
+
+.prices .prices__hover .hover-item-gallery__title {
+  font-size: 33px;
+  line-height: 124.24242%;
+  color: #FFFFFF;
+}
+
+.prices .prices__hover .hover-item-gallery__description {
+  font-size: 22px;
+  line-height: 118.18182%;
+}
+
+.prices .prices__hover .hover-item-gallery__description p:first-child {
+  margin-bottom: 5px;
+}
+
+.prices .prices__hover .hover-item-gallery__description p:last-child {
+  font-family: "Museo-500";
+  font-size: 34px;
+}
+
+.prices .prices__hover .hover-item-gallery__title {
+  margin-bottom: 15px;
+}
+
+.prices .prices__hover .hover-item-gallery__description {
+  margin-bottom: 30px;
+}
+
+.prices .prices__hover .hover-item-gallery__btn {
+  width: 270px;
+  padding: 17px 0;
+  margin: 0;
+}
+
+.prices .prices__hover .hover-item-gallery__btn a {
+  font-size: 32px;
+  line-height: 131.25%;
+}
+
+.prices__card {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 31.8323%;
+          flex: 0 1 31.8323%;
+  max-width: 345px;
+  padding: 0 30px;
+  border-radius: 15px;
+  background-color: #451db9;
+}
+
+.card-prices {
+  padding: 20px 20px 25px 20px;
+  position: relative;
+}
+
+.card-prices__image {
+  margin-bottom: 30px;
+  padding: 0 0 84% 0;
+}
+
+.card-prices__image img {
+  border-radius: 17px;
+  z-index: 2;
+}
+
+.card-prices__title {
+  margin-bottom: 13px;
+  padding-left: 10px;
+  color: #fff;
+  font-family: "Museo-500";
+  font-size: 32px;
+  line-height: 118.75%;
+}
+
+.card-prices__list {
+  padding-left: 10px;
+}
+
+.card-prices__item {
+  position: relative;
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 122.22222%;
+}
+
+.card-prices__item::before {
+  content: '';
+  position: absolute;
+  top: 45%;
+  left: -11px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.card-prices__item:last-child {
+  margin-bottom: 0;
+}
+
+._no-webp .wrapper{
   background: url("../img/icons/flower-m.png") 92% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat; }
 
 .wrapper {
@@ -848,13 +991,8 @@ body {
           flex: 1 1 auto;
 }
 
-.page__header {
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 80px 0px;
-}
-
 .page__greeting {
-  padding: 0px 0px 75px 0px;
+  padding: 160px 0px 75px 0px;
 }
 
 .page__about-us {
@@ -865,6 +1003,10 @@ body {
   margin-bottom: 75px;
 }
 
+.page__gallery {
+  margin-bottom: 80px;
+}
+
 @media (min-width: 991.98px) {
   .gallery__slide:hover .gallery__hover {
     -webkit-transform: translate(0, 0);
@@ -872,20 +1014,53 @@ body {
             transform: translate(0, 0);
   }
 
-  .gallery__slide:hover .item-product__title,
-  .gallery__slide:hover .item-product__footer {
-    opacity: 0;
+  .prices__card:hover .prices__hover {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-transition-delay: .2s;
+         -o-transition-delay: .2s;
+            transition-delay: .2s;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  .prices__card:hover .card-prices__list li::before {
+    display: none;
+  }
+
+  .prices__card:hover .card-prices__list li,
+  .prices__card:hover .card-prices__title {
+    -webkit-transition: all 0.5s ease 0s;
+    -o-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+    text-align: center;
+    font-size: 0;
+  }
+
+  .prices__card:hover .card-prices__image {
+    margin-bottom: 0;
+  }
+
+  .prices__card:hover .card-prices__image img {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    -webkit-transform: translate(0, -30%) scale(1.1);
+        -ms-transform: translate(0, -30%) scale(1.1);
+            transform: translate(0, -30%) scale(1.1);
   }
 }
 
 @media (max-width: 1160px) {
-  ._no-webp .wrapper {
+  ._no-webp .wrapper{
     background: url("../img/icons/flower-m.png") 106% 100px no-repeat, url("../img/icons/flower-s.png") -7.9% 63px no-repeat; }
 }
 
-._webp .wrapper { background: url(../img/icons/flower-m.webp) 92% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
+._webp .wrapper{ background: url(../img/icons/flower-m.webp) 92% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
 
-@media (max-width: 1160px) {
+@media (max-width: 1160px){
 
-  ._webp .wrapper { background: url(../img/icons/flower-m.webp) 106% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
+  ._webp .wrapper{ background: url(../img/icons/flower-m.webp) 106% 100px no-repeat, url(../img/icons/flower-s.webp) -7.9% 63px no-repeat; }
 }
