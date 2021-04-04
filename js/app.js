@@ -93,6 +93,13 @@ function typeText() {
 	typeLine();
 }
 typeText();
+
+//======================
+
+document.addEventListener("DOMContentLoaded", function () {
+	let header = document.querySelector('.header');
+	header.classList.add('_active');
+});
 "use strict";
 
 // Dynamic Adapt v.1
@@ -417,8 +424,8 @@ if (animItems.length > 0) {
 }
 //=================================================
 //===========BURGER==================================================
-const burger = document.querySelector('.header__burger')
-const mobileMenu = document.querySelector('.menu-header')
+const burger = document.querySelector('.header__burger');
+const mobileMenu = document.querySelector('.menu-header');
 
 const classNameActive = '_active';
 const classNameLock = 'lock';
@@ -432,7 +439,7 @@ function toggleClass(elements, classNameActive, classNameLock) {
 //Закрываем бурег по клику на ссылку внутри
 function burgerClose() {
     elements.forEach(element => element.classList.toggle(classNameActive));
-    document.querySelector('body').classList.toggle(classNameLock);
+    document.querySelector('body').classList.remove(classNameLock);
 }
 
 const links = document.querySelectorAll('.menu-header__link');
