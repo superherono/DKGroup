@@ -403,6 +403,14 @@ body.lock {
 .title {
   font-size: 70px;
   line-height: 120%;
+  opacity: 0;
+  -webkit-transition: all .3s ease .2s;
+  -o-transition: all .3s ease .2s;
+  transition: all .3s ease .2s;
+}
+
+.title._active {
+  opacity: 1;
 }
 
 .lg-actions .lg-next,
@@ -1623,6 +1631,8 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-size: 70px;
+  line-height: 120%;
 }
 
 .greeting__title span {
@@ -1725,14 +1735,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
 .about-us__title {
   margin: 0px 0px 25px 0px;
-  opacity: 0;
-  -webkit-transition: all 0.6s ease .1s;
-  -o-transition: all 0.6s ease .1s;
-  transition: all 0.6s ease .1s;
-}
-
-.about-us__title._active {
-  opacity: 1;
 }
 
 .about-us__text {
@@ -2001,7 +2003,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   display: inline-block;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   border-radius: 50%;
   background-color: #fbb034;
   background-image: -o-linear-gradient(135deg, #fbb034 0%, #ffdd00 74%);
@@ -2032,15 +2034,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
   -webkit-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
           transform: rotate(180deg);
-  margin-left: 10px;
+  margin-right: 15px;
 }
 
 .gallery .arrow-left img {
   width: 24px;
-}
-
-.gallery__main-photo {
-  display: none;
 }
 
 .hover-item-gallery {
@@ -2580,6 +2578,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
     margin-bottom: calc(10px + 28 * ((100vw - 320px) / 1008));
   }
 
+  .greeting__title {
+    font-size: calc(35px + 35 * ((100vw - 320px) / 1008));
+  }
+
   .greeting__description {
     margin-bottom: calc(10px + 60 * ((100vw - 320px) / 1008));
   }
@@ -3050,14 +3052,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item.lg-complete .lg-object 
 
   .gallery__image_xs {
     display: inline-block;
-  }
-
-  .gallery .arrow-right {
-    display: none;
-  }
-
-  .gallery .arrow-left {
-    display: none;
   }
 
   .footer__logo .logo__icon img {
